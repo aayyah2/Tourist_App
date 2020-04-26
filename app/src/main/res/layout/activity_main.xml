@@ -11,7 +11,7 @@
         android:layout_width="292dp"
         android:layout_height="47dp"
         android:text="Select Desired Location:"
-        android:textSize="25"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -39,21 +39,21 @@
             android:layout_width="148dp"
             android:layout_height="44dp"
             android:text="New York"
-            android:textSize="20" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/njButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="New Jersey"
-            android:textSize="20" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/connecticutButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Connecticut"
-            android:textSize="20" />
+            android:textSize="18sp" />
     </RadioGroup>
 
     <TextView
@@ -67,7 +67,7 @@
         android:layout_marginRight="46dp"
         android:layout_marginBottom="17dp"
         android:text="Do you want to see only Child-Friendly Activities?"
-        android:textSize="25"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/toggleButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
         android:layout_marginRight="42dp"
         android:layout_marginBottom="10dp"
         android:text="Please Enter your Email so that we can send you a list of activties:"
-        android:textSize="20"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editText3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -154,7 +154,7 @@
         android:layout_marginRight="9dp"
         android:layout_marginBottom="36dp"
         android:text="Welcome to the Tri-State Tourist App!"
-        android:textSize="22"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"

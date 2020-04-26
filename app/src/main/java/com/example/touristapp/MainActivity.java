@@ -10,5 +10,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Attraction testAttraction = new Attraction(1,1,1);
+        System.out.println(testAttraction.getAttractionID());
+
     }
 }
