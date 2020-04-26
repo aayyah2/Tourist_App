@@ -33,13 +33,13 @@
         android:layout_marginBottom="15dp"
         android:text="Select Desired Location:"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintBottom_toTopOf="@+id/locationGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <RadioGroup
-        android:id="@+id/radioGroup2"
+        android:id="@+id/locationGroup"
         android:layout_width="217dp"
         android:layout_height="97dp"
         android:layout_marginStart="16dp"
@@ -49,21 +49,21 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4">
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/nyButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New York"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton8"
+            android:id="@+id/njButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Jersey"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton9"
+            android:id="@+id/ctButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Connecticut"
@@ -82,13 +82,13 @@
         android:layout_marginBottom="20dp"
         android:text="Select Activity Category:"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+        app:layout_constraintBottom_toTopOf="@+id/childGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+        app:layout_constraintTop_toBottomOf="@+id/locationGroup" />
 
     <RadioGroup
-        android:id="@+id/radioGroup3"
+        android:id="@+id/childGroup"
         android:layout_width="227dp"
         android:layout_height="65dp"
         android:layout_marginStart="22dp"
@@ -103,14 +103,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
         <RadioButton
-            android:id="@+id/radioButton10"
+            android:id="@+id/adultButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Adult"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton11"
+            android:id="@+id/childButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Child"
@@ -129,13 +129,13 @@
         android:layout_marginBottom="21dp"
         android:text="Select Activity Type:"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/radioGroup5"
+        app:layout_constraintBottom_toTopOf="@+id/typeGroup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+        app:layout_constraintTop_toBottomOf="@+id/childGroup" />
 
     <RadioGroup
-        android:id="@+id/radioGroup5"
+        android:id="@+id/typeGroup"
         android:layout_width="218dp"
         android:layout_height="97dp"
         android:layout_marginStart="21dp"
@@ -150,24 +150,52 @@
         app:layout_constraintTop_toBottomOf="@+id/textView10">
 
         <RadioButton
-            android:id="@+id/radioButton12"
+            android:id="@+id/attractionButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Attractions"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton13"
+            android:id="@+id/restaurantButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Restaurants"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/radioButton14"
+            android:id="@+id/hotelButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hotels"
             android:textSize="16sp" />
     </RadioGroup>
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:layout_marginBottom="68dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/testView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginRight="176dp"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

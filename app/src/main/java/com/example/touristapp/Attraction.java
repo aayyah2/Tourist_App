@@ -24,4 +24,37 @@ public class Attraction {
         return attractionID;
     }
 
+    public String getStateID() {
+        if (stateID == 0) {
+            return "New York ";
+        } else if (stateID == 1) {
+            return "Connecticut ";
+        } else if (stateID == 2) {
+            return "New Jersey ";
+        }
+        return "None Selected ";
+    }
+
+    public String getChildID() {
+        if (childID == 0) {
+            return "Child-Friendly ";
+        } else if (childID == 1) {
+            return "Adult-Friendly ";
+        }
+        return "None Selected ";
+    }
+
+    public String getCategoryID() {
+        if (categoryID == 0) {
+            return "Restaurant ";
+        } else if (categoryID == 1) {
+            return "Attraction ";
+        } else if (categoryID == 2) {
+            return "Hotel ";
+        }
+        return "None Selected ";
+    }
+
+
+
 }
