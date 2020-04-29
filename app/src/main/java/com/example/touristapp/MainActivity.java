@@ -90,18 +90,21 @@ public class MainActivity extends AppCompatActivity {
             testView.setText(testCode);
 
             String result = findAttraction(locationPref, categoryPref, typePref);
-            setContentView(R.layout.newyork_layout);
+            if (locationPref == 0) {
+                setContentView(R.layout.newyork_layout);
+            } else if (locationPref == 1) {
+                setContentView(R.layout.connecticut_layout);
+            } else {
+                setContentView(R.layout.activity_nj);
+            }
+
             TextView resultView = findViewById(R.id.resultView);
             String userResult = "Your ideal " + userPref.getCategoryID() + "in " + userPref.getStateID()
                     + "that is " + userPref.getChildID() + "is " + result;
             resultView.setText(userResult);
 
-            //image 
+            //image
         });
-
-
-
-
 
     }
     private void createAttractionMap() {
