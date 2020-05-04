@@ -17,35 +17,9 @@
             android:text="Your ideal location is:"
             android:textColor="#040404"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/imageBox"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <ImageView
-            android:id="@+id/imageBox"
-            android:layout_width="353dp"
-            android:layout_height="364dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultView"
-            tools:srcCompat="@drawable/connecticut" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="306dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="47dp"
-            android:layout_marginLeft="47dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="47dp"
-            android:layout_marginRight="47dp"
-            android:text="Display Weather:"
-            android:textSize="24sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageBox" />
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
