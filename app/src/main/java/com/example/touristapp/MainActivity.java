@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
             RadioButton restaurant = findViewById(R.id.restaurantButton);
             RadioButton hotel = findViewById(R.id.hotelButton);
 
-            //if all three radio groups are  filled, go into on lick listener, else change text view
 
             nextButton.setOnClickListener(y -> {
 
@@ -95,27 +94,26 @@ public class MainActivity extends AppCompatActivity {
                         typePref = 2;
                     }
                 }
-                Attraction userPref = new Attraction(locationPref, categoryPref, typePref);
-
-                String testCode = userPref.getAttractionID();
-                TextView testView = findViewById(R.id.testView);
-                testView.setText(testCode);
-
-                String result = findAttraction(locationPref, categoryPref, typePref);
-                if (locationPref == 0) {
-                    setContentView(R.layout.newyork_layout);
-                } else if (locationPref == 1) {
-                    setContentView(R.layout.connecticut_layout);
+                if (typeGroup.getCheckedRadioButtonId() == -1 || childGroup.getCheckedRadioButtonId() == -1 || locationGroup.getCheckedRadioButtonId() == -1) {
+                    TextView testView = findViewById(R.id.testView);
+                    testView.setText("Please select all three.");
                 } else {
-                    setContentView(R.layout.activity_nj);
+                    Attraction userPref = new Attraction(locationPref, categoryPref, typePref);
+
+                    String result = findAttraction(locationPref, categoryPref, typePref);
+                    if (locationPref == 0) {
+                        setContentView(R.layout.newyork_layout);
+                    } else if (locationPref == 1) {
+                        setContentView(R.layout.connecticut_layout);
+                    } else {
+                        setContentView(R.layout.activity_nj);
+                    }
+
+                    TextView resultView = findViewById(R.id.resultView);
+                    String userResult = "Your ideal " + userPref.getCategoryID() + "in " + userPref.getStateID()
+                            + "that is " + userPref.getChildID() + "is " + result + ".";
+                    resultView.setText(userResult);
                 }
-
-                TextView resultView = findViewById(R.id.resultView);
-                String userResult = "Your ideal " + userPref.getCategoryID() + "in " + userPref.getStateID()
-                        + "that is " + userPref.getChildID() + "is " + result + ".";
-                resultView.setText(userResult);
-
-                //image
             });
         });
 
@@ -175,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
         return "None Found ";
     }
 
+    // We referred to an article from TechnoBite to implement the path component of this method.
     public void playVideo() {
         MediaController m = new MediaController(this);
         videoView.setMediaController(m);
@@ -187,5 +186,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
 
 
